@@ -1,0 +1,21 @@
+.action-delete{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+
+.rounded-circle{
+    border-radius: 22.5px;
+}
+
+.names{
+  display: flex;
+  
+}
+
+.names p{
+    top: 13px;
+    left: 27px;
+    position: relative;
+  }

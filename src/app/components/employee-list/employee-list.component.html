@@ -1,0 +1,43 @@
+<app-emp-form [formValue]="employee" (emitter)="getEmployees()"> </app-emp-form>
+
+Employees:
+
+<table class="table align-middle mb-0 bg-white">
+  <thead class="bg-light">
+    <tr>
+      <th *ngFor="let col of columns">{{ col | titlecase }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees; let i = index">
+      <td>
+        <div class="d-flex align-items-center names">
+          <img
+            src="../../../assets/icon-{{getImage(i)}}.JPG"
+            alt=""
+            style="width: 45px; height: 45px"
+            class="rounded-circle"
+          />
+            <p class="fw-bold mb-1" style="top:3px">{{ emp.fname }} {{ emp.lname }}</p>
+        </div>
+      </td>
+      <td>
+        {{ emp.empId }}
+      </td>
+      <td>
+        {{ emp.dob | age }}
+      </td>
+      <td>{{ emp.emailId }}</td>
+      <td>
+        {{ emp.dept }}
+      </td>
+      <td>
+    
+        <i class="fa fa-pencil action-delete" title="Edit" (click)="editEmployee(emp)" aria-hidden="true"></i>
+
+        <i class="fa fa-trash action-delete"  (click)="deleteEmployee(emp)" placeholder="Delete" aria-hidden="true"></i>
+
+      </td>
+    </tr>
+  </tbody>
+</table>

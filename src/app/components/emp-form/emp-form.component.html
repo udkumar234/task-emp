@@ -1,0 +1,35 @@
+<form>
+  <div [formGroup]="formGroup">
+    <div class="form-control">
+      <label>First Name</label>
+      <input type="text" placeholder="fname" formControlName="fname" />
+    </div>
+
+    <div class="form-control">
+      <label>Last Name</label>
+      <input type="text" placeholder="lname" formControlName="lname" />
+    </div>
+
+    <div class="form-control">
+      <label>Email Id</label>
+      <input type="email" placeholder="email" formControlName="emailId" />
+    </div>
+
+    <div class="form-control">
+      <label>Employee Id</label>
+      <input type="email" placeholder="Employee Id" formControlName="empId" />
+    </div>
+
+    <div class="form-control">
+      <label>DOB</label>
+      <input type="date" placeholder="DOB" formControlName="dob" />
+    </div>
+
+    <div class="form-control">
+      <label>Department</label>
+      <input type="text" placeholder="dept" formControlName="dept" />
+    </div>
+  </div>
+  <button class="btn btn-primary" (click)="saveData()">Save</button>
+  <button type="reset" class="btn btn-secondary">Reset</button>
+</form>
